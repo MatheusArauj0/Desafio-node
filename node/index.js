@@ -11,12 +11,6 @@ const config = {
     database: 'nodedb'
 }
 
-const connection = mysql.createConnection(config)
-connection.query("INSERT INTO people(nome) VALUES('Matheus'), ('João'), ('Wesley')", (err) => {
-  if (err) console.error('Erro ao inserir:', err)
-  connection.end()
-})
-
 app.get('/', (req, res) => {
  const connection = mysql.createConnection(config)
 
